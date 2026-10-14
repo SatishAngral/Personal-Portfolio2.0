@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Satish Angral - Frontend Web Developer & Java Enthusiast Portfolio" />
+  <title>Satish Angral | Frontend Developer & Java Enthusiast</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Ambient Background Glows -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <!-- Header / Navigation -->
+  <header class="header" id="header">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>Personal<span class="logo-accent">Canvas</span><span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+          <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+          <li class="nav-item"><a href="#experience" class="nav-link">Journey</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme" title="Switch Theme">
+          <i class="fa-solid fa-moon dark-icon"></i>
+          <i class="fa-solid fa-sun light-icon"></i>
+        </button>
+
+        <!-- Mobile Menu Button -->
+        <button id="nav-toggle" class="nav-toggle-btn" aria-label="Toggle navigation menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="status-indicator"></span>
+            <span class="badge-text">Available for Frontend & Java Roles</span>
+            <span class="badge-paw">🐾</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Satish Angral</span>
+          </h1>
+
+          <h2 class="hero-subtitle">
+            <span class="role-highlight">Frontend Web Developer</span> &amp; <span class="role-highlight">Java Programmer</span>
+          </h2>
+
+          <p class="hero-description">
+            I craft visually engaging, pixel-perfect, and ultra-responsive web interfaces with modern <strong>HTML5</strong> and <strong>CSS3</strong>, backed by strong algorithmic and problem-solving skills in <strong>Java</strong>.
+          </p>
+
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fa-solid fa-sparkles"></i> View My Projects
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <i class="fa-regular fa-paper-plane"></i> Contact Me
+            </a>
+            <button class="btn btn-ghost copy-email-btn" id="copy-email-hero" data-email="satish.angral@example.com" title="Copy email address">
+              <i class="fa-regular fa-copy"></i> Copy Email
+            </button>
+          </div>
+
+          <div class="hero-socials">
+            <span class="social-label">Follow Me:</span>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter Profile">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="mailto:satish.angral@example.com" aria-label="Send Email">
+              <i class="fa-regular fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Visual: Cute Cat Profile Card with Floating Badges -->
+        <div class="hero-visual">
+          <div class="cat-profile-wrapper">
+            <!-- Animated Gradient Ring -->
+            <div class="profile-glow"></div>
+            
+            <div class="profile-card" id="cat-card" title="Click me for a cute meow!">
+              <div class="profile-avatar-container">
+                <img 
+                  src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=700&q=80" 
+                  alt="Satish Angral's Cute Cat Profile Avatar" 
+                  class="profile-avatar-img"
+                  id="cat-avatar"
+                  loading="eager"
+                />
+                <div class="cat-purr-bubble" id="purr-bubble">Meow! 🐾💖</div>
+              </div>
+
+              <!-- Profile Details Bottom Bar -->
+              <div class="profile-card-footer">
+                <div class="profile-meta">
+                  <span class="profile-name">Satish Angral</span>
+                  <span class="profile-tagline">Frontend Specialist 🐱💻</span>
+                </div>
+                <div class="profile-online-badge">
+                  <span class="pulse-dot"></span> Active
+                </div>
+              </div>
+
+              <!-- Floating Tech Badges -->
+              <div class="floating-badge badge-html-css">
+                <i class="fa-brands fa-html5 text-orange"></i>
+                <i class="fa-brands fa-css3-alt text-blue"></i>
+                <span>HTML &amp; CSS</span>
+              </div>
+
+              <div class="floating-badge badge-java">
+                <i class="fa-brands fa-java text-java"></i>
+                <span>Java Core</span>
+              </div>
+
+              <div class="floating-badge badge-frontend">
+                <i class="fa-solid fa-code"></i>
+                <span>Pixel Perfect</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title">Driven by Design, Powered by Code</h2>
+          <p class="section-subtitle">Bridging beautiful frontend designs with solid software fundamentals.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text-content">
+            <h3 class="about-heading">
+              Hello! I'm <span class="gradient-text">Satish Angral</span>
+            </h3>
+            <p>
+              I am a dedicated frontend developer with a strong foundation in <strong>HTML5, CSS3</strong>, and <strong>Core Java</strong>. I take pride in turning creative mockups into clean, responsive, and intuitive web experiences that delight users across all screen sizes.
+            </p>
+            <p>
+              My journey combines the visual artistry of modern frontend styling with the disciplined structure and logic of <strong>Java object-oriented programming</strong>. Whether crafting complex CSS grid layouts, building custom interactive UI components, or solving algorithmic challenges in Java, I strive for clean, maintainable, and efficient code.
+            </p>
+            <p>
+              When I'm away from the keyboard, I enjoy playing with cats 🐱, exploring creative design inspirations, and discovering the latest frontend trends.
+            </p>
+
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Semantic &amp; Accessible HTML</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Modern Responsive CSS &amp; Flex/Grid</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Solid Core Java &amp; OOP Foundations</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Cross-Browser &amp; Mobile Optimization</span>
+              </div>
+            </div>
+
+            <div class="about-actions">
+              <a href="#contact" class="btn btn-primary">
+                <i class="fa-solid fa-paper-plane"></i> Get in Touch
+              </a>
+              <a href="#" class="btn btn-outline" id="download-cv">
+                <i class="fa-solid fa-download"></i> Download Resume
+              </a>
+            </div>
+          </div>
+
+          <div class="about-stats-grid">
+            <div class="glass-stat-card">
+              <div class="stat-icon-wrapper">
+                <i class="fa-solid fa-laptop-code"></i>
+              </div>
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Responsive Frontend Layouts</span>
+            </div>
+
+            <div class="glass-stat-card">
+              <div class="stat-icon-wrapper">
+                <i class="fa-brands fa-java"></i>
+              </div>
+              <span class="stat-number">Java</span>
+              <span class="stat-label">OOP &amp; Logic Building</span>
+            </div>
+
+            <div class="glass-stat-card">
+              <div class="stat-icon-wrapper">
+                <i class="fa-brands fa-css3-alt"></i>
+              </div>
+              <span class="stat-number">CSS3</span>
+              <span class="stat-label">Modern Styling &amp; Animations</span>
+            </div>
+
+            <div class="glass-stat-card">
+              <div class="stat-icon-wrapper">
+                <i class="fa-solid fa-cat"></i>
+              </div>
+              <span class="stat-number">Infinite</span>
+              <span class="stat-label">Love for Cats &amp; Clean Code</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Key Competencies</span>
+          <h2 class="section-title">My Tech Stack &amp; Skills</h2>
+          <p class="section-subtitle">Specialized in Frontend development with strong Java programming skills.</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Skill Card 1: HTML5 & Markup -->
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-card-icon html-icon">
+                <i class="fa-brands fa-html5"></i>
+              </div>
+              <span class="skill-level-badge">Primary Focus</span>
+            </div>
+            <h3 class="skill-card-title">HTML5 &amp; Web Standards</h3>
+            <p class="skill-card-desc">
+              Writing clean, semantic, and SEO-friendly markup that adheres to accessibility best practices and modern web standards.
+            </p>
+            <div class="skill-pill-list">
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> Semantic HTML</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> Forms &amp; Inputs</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> Accessibility (a11y)</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> Audio / Video / Canvas</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> SEO Optimization</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 2: CSS3 & Styling -->
+          <div class="skill-card featured-skill-card">
+            <div class="skill-card-top">
+              <div class="skill-card-icon css-icon">
+                <i class="fa-brands fa-css3-alt"></i>
+              </div>
+              <span class="skill-level-badge highlight">Mastery</span>
+            </div>
+            <h3 class="skill-card-title">CSS3 &amp; UI Styling</h3>
+            <p class="skill-card-desc">
+              Crafting visually captivating layouts with Flexbox, CSS Grid, custom properties, glassmorphism, keyframe animations, and mobile responsiveness.
+            </p>
+            <div class="skill-pill-list">
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> CSS Flexbox &amp; Grid</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> Media Queries &amp; Responsive UI</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> CSS Variables &amp; Themes</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> Transitions &amp; Keyframes</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> Modern Glassmorphism</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 3: Java Programming -->
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-card-icon java-icon">
+                <i class="fa-brands fa-java"></i>
+              </div>
+              <span class="skill-level-badge">Core Logic</span>
+            </div>
+            <h3 class="skill-card-title">Java Programming</h3>
+            <p class="skill-card-desc">
+              Strong grounding in Object-Oriented Programming (OOP), modular architecture, data structures, and algorithmic logic.
+            </p>
+            <div class="skill-pill-list">
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> Core Java Syntax</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> OOP (Inheritance, Polymorphism)</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> Collections Framework</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> Exception Handling</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> Data Structures &amp; Logic</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 4: JavaScript & Frontend Interactivity -->
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-card-icon js-icon">
+                <i class="fa-brands fa-js"></i>
+              </div>
+              <span class="skill-level-badge">Frontend</span>
+            </div>
+            <h3 class="skill-card-title">JavaScript Essentials</h3>
+            <p class="skill-card-desc">
+              Enriching static web designs with dynamic interactivity, DOM manipulation, event listeners, and API integration.
+            </p>
+            <div class="skill-pill-list">
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> DOM Manipulation</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> ES6+ Syntax</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> Event Handling</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> LocalStorage &amp; State</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> Fetch API &amp; JSON</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 5: Modern UI/UX Design -->
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-card-icon ui-icon">
+                <i class="fa-solid fa-palette"></i>
+              </div>
+              <span class="skill-level-badge">Design</span>
+            </div>
+            <h3 class="skill-card-title">UI/UX &amp; Web Design</h3>
+            <p class="skill-card-desc">
+              Creating clean interfaces, thoughtful typography hierarchy, pleasing color palettes, and intuitive user experiences.
+            </p>
+            <div class="skill-pill-list">
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> Typography &amp; Color Theory</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> Mobile-First Approach</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> Interactive Micro-animations</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> Dark &amp; Light Theming</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 6: Tools & Workflow -->
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-card-icon tools-icon">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+              </div>
+              <span class="skill-level-badge">Workflow</span>
+            </div>
+            <h3 class="skill-card-title">Tools &amp; Version Control</h3>
+            <p class="skill-card-desc">
+              Standard developer toolkit to maintain, version, and debug code with efficiency and speed.
+            </p>
+            <div class="skill-pill-list">
+              <span class="skill-pill"><i class="fa-brands fa-git-alt"></i> Git Version Control</span>
+              <span class="skill-pill"><i class="fa-brands fa-github"></i> GitHub Repositories</span>
+              <span class="skill-pill"><i class="fa-solid fa-code"></i> VS Code &amp; IntelliJ IDEA</span>
+              <span class="skill-pill"><i class="fa-solid fa-terminal"></i> Chrome DevTools</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Showcase</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">Real-world projects showcasing HTML, CSS frontend design, and Java engineering.</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: Frontend E-Commerce Storefront -->
+          <div class="project-card">
+            <div class="project-preview-wrapper">
+              <div class="project-mockup ecom-gradient">
+                <i class="fa-solid fa-bag-shopping project-large-icon"></i>
+                <div class="mockup-header-bar">
+                  <span class="mock-dot"></span>
+                  <span class="mock-dot"></span>
+                  <span class="mock-dot"></span>
+                </div>
+              </div>
+              <div class="project-overlay-links">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="overlay-btn" title="View GitHub Code">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="#" class="overlay-btn" title="Live Preview">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-category-tag">Frontend &amp; Responsive UI</div>
+              <h3 class="project-title">Modern E-Commerce Storefront</h3>
+              <p class="project-desc">
+                A sleek, responsive online shopping interface built entirely with semantic HTML5 and modern CSS3 (Flexbox &amp; CSS Grid). Features product filters, cart sidebar, interactive modal views, and dark mode.
+              </p>
+              <div class="project-tags">
+                <span class="tag tag-html">HTML5</span>
+                <span class="tag tag-css">CSS3</span>
+                <span class="tag tag-flex">Flexbox &amp; Grid</span>
+                <span class="tag tag-js">JavaScript</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Java Management & Banking System -->
+          <div class="project-card">
+            <div class="project-preview-wrapper">
+              <div class="project-mockup java-gradient">
+                <i class="fa-brands fa-java project-large-icon"></i>
+                <div class="mockup-header-bar">
+                  <span class="mock-dot"></span>
+                  <span class="mock-dot"></span>
+                  <span class="mock-dot"></span>
+                </div>
+              </div>
+              <div class="project-overlay-links">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="overlay-btn" title="View GitHub Code">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="#" class="overlay-btn" title="Live Preview">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-category-tag">Java &amp; OOP Logic</div>
+              <h3 class="project-title">Java Banking &amp; Account Manager</h3>
+              <p class="project-desc">
+                An object-oriented Java application handling secure bank account operations, transaction history, customer profiles, and balance validation utilizing OOP principles, collections, and custom exceptions.
+              </p>
+              <div class="project-tags">
+                <span class="tag tag-java">Java</span>
+                <span class="tag tag-oop">OOP Principles</span>
+                <span class="tag tag-algo">Data Structures</span>
+                <span class="tag tag-cli">Exception Handling</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Interactive Dashboard UI -->
+          <div class="project-card">
+            <div class="project-preview-wrapper">
+              <div class="project-mockup dash-gradient">
+                <i class="fa-solid fa-chart-line project-large-icon"></i>
+                <div class="mockup-header-bar">
+                  <span class="mock-dot"></span>
+                  <span class="mock-dot"></span>
+                  <span class="mock-dot"></span>
+                </div>
+              </div>
+              <div class="project-overlay-links">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="overlay-btn" title="View GitHub Code">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="#" class="overlay-btn" title="Live Preview">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-category-tag">UI &amp; Glassmorphism</div>
+              <h3 class="project-title">Analytics Glass Dashboard</h3>
+              <p class="project-desc">
+                A modern administrative dashboard featuring glassmorphism card designs, custom CSS data charts, collapsible navigation sidebar, and dynamic theme switching.
+              </p>
+              <div class="project-tags">
+                <span class="tag tag-html">HTML5</span>
+                <span class="tag tag-css">Glassmorphism</span>
+                <span class="tag tag-anim">CSS Animations</span>
+                <span class="tag tag-js">JavaScript</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: Cat Sanctuary & Pet Adoption Portal -->
+          <div class="project-card">
+            <div class="project-preview-wrapper">
+              <div class="project-mockup cat-gradient">
+                <i class="fa-solid fa-cat project-large-icon"></i>
+                <div class="mockup-header-bar">
+                  <span class="mock-dot"></span>
+                  <span class="mock-dot"></span>
+                  <span class="mock-dot"></span>
+                </div>
+              </div>
+              <div class="project-overlay-links">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="overlay-btn" title="View GitHub Code">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="#" class="overlay-btn" title="Live Preview">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-category-tag">Web Design &amp; Layout</div>
+              <h3 class="project-title">Paws &amp; Whiskers Pet Portal</h3>
+              <p class="project-desc">
+                A delightful, heartwarming pet adoption website featuring interactive pet gallery cards, breed filter buttons, responsive adoption forms, and playful micro-animations.
+              </p>
+              <div class="project-tags">
+                <span class="tag tag-html">HTML5</span>
+                <span class="tag tag-css">CSS Grid</span>
+                <span class="tag tag-anim">Micro-Interactions</span>
+                <span class="tag tag-paw">🐾 Purrfect UI</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience / Education Journey -->
+    <section class="section experience" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Milestones</span>
+          <h2 class="section-title">My Journey &amp; Education</h2>
+          <p class="section-subtitle">The path that shaped my passion for frontend web development and programming.</p>
+        </div>
+
+        <div class="timeline">
+          <!-- Timeline Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-badge-date">Present</div>
+              <h3 class="timeline-role">Frontend Web Developer &amp; Programmer</h3>
+              <span class="timeline-company">Independent Projects &amp; Open Source</span>
+              <p class="timeline-desc">
+                Designing and coding responsive, accessible web applications using modern HTML5 and CSS3. Building reusable UI component layouts, optimizing performance, and engineering robust Java backend algorithms.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot">
+              <i class="fa-brands fa-java"></i>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-badge-date">Deep Dive</div>
+              <h3 class="timeline-role">Core Java &amp; Object-Oriented Engineering</h3>
+              <span class="timeline-company">Software Development Training</span>
+              <p class="timeline-desc">
+                Mastered Java fundamentals, object-oriented principles (inheritance, encapsulation, polymorphism), exception handling, and core data structures. Implemented modular programs and algorithm solutions.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3 -->
+          <div class="timeline-item">
+            <div class="timeline-dot">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-badge-date">Foundation</div>
+              <h3 class="timeline-role">Computer Science &amp; Web Development Studies</h3>
+              <span class="timeline-company">Academic Degree / College</span>
+              <p class="timeline-desc">
+                Learned foundational computer science, algorithm design, relational database concepts, software engineering methodologies, and frontend web development basics.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Let's Connect</span>
+          <h2 class="section-title">Get in Touch with Satish</h2>
+          <p class="section-subtitle">Interested in working together or have a question? I'd love to hear from you!</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Info -->
+          <div class="contact-info">
+            <div class="contact-info-card">
+              <div class="contact-cat-badge">
+                <i class="fa-solid fa-cat"></i>
+                <span>Fast response guaranteed!</span>
+              </div>
+              <h3 class="contact-info-title">Let's build something awesome</h3>
+              <p class="contact-info-desc">
+                I am actively open to frontend development opportunities, Java software roles, freelance collaborations, and exciting coding challenges.
+              </p>
+
+              <div class="contact-details">
+                <div class="contact-item">
+                  <div class="contact-item-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                  </div>
+                  <div class="contact-item-content">
+                    <span class="contact-label">Email</span>
+                    <a href="mailto:satish.angral@example.com" class="contact-value" id="email-address-text">satishangral@gmail.com</a>
+                  </div>
+                  <button class="copy-btn" id="copy-email-contact" data-email="satish.angral@example.com" title="Copy to clipboard">
+                    <i class="fa-regular fa-copy"></i>
+                  </button>
+                </div>
+
+                <div class="contact-item">
+                  <div class="contact-item-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                  </div>
+                  <div class="contact-item-content">
+                    <span class="contact-label">Location</span>
+                    <span class="contact-value">Available for Remote &amp; On-Site</span>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div class="contact-item-icon">
+                    <i class="fa-solid fa-circle-check text-green"></i>
+                  </div>
+                  <div class="contact-item-content">
+                    <span class="contact-label">Status</span>
+                    <span class="contact-value">Open to Full-Time / Freelance</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Social Buttons Row -->
+              <div class="contact-social-row">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="GitHub">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="LinkedIn">
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="Twitter / X">
+                  <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="mailto:satish.angral@example.com" class="social-circle-btn" aria-label="Email">
+                  <i class="fa-regular fa-envelope"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-wrapper">
+            <form id="contact-form" class="contact-form">
+              <div class="form-header-line">
+                <h3 class="form-title">Send a Direct Message</h3>
+                <span class="form-subtitle">Fill out the fields below and I'll get back to you shortly.</span>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name"><i class="fa-regular fa-user"></i> Your Name</label>
+                  <input type="text" id="name" name="name" placeholder="Satish's Friend" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="email"><i class="fa-regular fa-envelope"></i> Your Email</label>
+                  <input type="email" id="email" name="email" placeholder="friend@example.com" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="subject"><i class="fa-regular fa-bookmark"></i> Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Frontend Project / Collaboration Opportunity" required />
+              </div>
+
+              <div class="form-group">
+                <label for="message"><i class="fa-regular fa-comment-dots"></i> Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Hi Satish, I would love to collaborate with you on..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="submit-btn">
+                <span>Send Message</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+
+            <div id="form-feedback" class="form-feedback" style="display: none;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <a href="#hero" class="footer-logo">
+          <span class="logo-bracket">&lt;</span>Personal<span class="logo-accent">Canvas</span><span class="logo-bracket">/&gt;</span>
+        </a>
+        <p class="footer-tagline">Crafted with modern HTML5, CSS3, &amp; Java love 🐾</p>
+      </div>
+
+      <div class="footer-center">
+        <p class="footer-copy">
+          &copy; <span id="current-year"></span> <strong>Satish Angral</strong>. All rights reserved.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#hero" class="back-to-top-btn" aria-label="Back to Top">
+          <span>Back to Top</span>
+          <i class="fa-solid fa-arrow-up"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Main JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
